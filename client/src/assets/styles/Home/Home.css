@@ -1,0 +1,132 @@
+.home-root {
+  background-image: url("/images/homeImg/bg.jpeg");
+  background-position: center;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.home-root.blur {
+  filter: blur(5px);
+}
+
+.home-img-beerglass {
+  position: absolute;
+  height: 200px;
+  width: 140px;
+  object-fit: cover;
+  object-position: center;
+  bottom: 20%;
+  left: 20%;
+}
+.home-img-beerglass-animate {
+  animation: moveBeerGlass 3s ease-in-out;
+}
+.home-img-tuborgbeer {
+  position: absolute;
+  height: 400px;
+  width: 100px;
+  object-fit: cover;
+  object-position: center;
+  bottom: 20%;
+  left: 12%;
+}
+.home-img-tuborgbeer-animate {
+  animation: moveBeer 3s ease-in-out;
+}
+
+@keyframes moveBeerGlass {
+  0% {
+    left: -20%;
+  }
+  100% {
+    left: 20%;
+  }
+}
+
+@keyframes moveBeer {
+  0% {
+    left: -20%;
+  }
+  100% {
+    left: 12%;
+  }
+}
+
+.home-img-about-mini {
+  position: absolute;
+  height: 105px;
+  width: 150px;
+  object-fit: cover;
+  object-position: center;
+  bottom: 10%;
+  left: 60%;
+  filter: blur(0.5px);
+}
+
+@media screen and (max-width: 1200px) {
+  .home-img-about-mini {
+    left: 40%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .home-img-about-mini {
+    position: absolute;
+    height: 50px;
+    width: 80px;
+    bottom: 10%;
+    left: 12%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .home-img-beerglass {
+    height: 200px;
+    width: 150px;
+  }
+  .home-img-tuborgbeer {
+    position: absolute;
+    height: 400px;
+    width: 100px;
+    bottom: 19%;
+    left: 5%;
+  }
+  @keyframes moveBeer {
+    0% {
+      left: -20%;
+    }
+    100% {
+      left: 5%;
+    }
+  }
+}
+
+h3 {
+  color: white;
+  padding: 10px;
+}
+.home-board-container {
+  position: absolute;
+  right: 5%;
+  bottom: 10%;
+}
+.about-me-popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  animation: slideIn 0.5s ease-out;
+}
+@keyframes slideIn {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 50%;
+  }
+}
+
+h1 {
+  color: white;
+}
